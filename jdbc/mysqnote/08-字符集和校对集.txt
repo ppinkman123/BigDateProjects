@@ -1,0 +1,23 @@
+1. 数据库可以指定字符集和校对集
+    create  database demo charset utf8mb3 collate utf8_general_ci;
+    如果创建数据库时，没有指定字符集和校对集，会使用默认的字符集和校对集
+    MySQL5.7 默认的字符集是  Latin1,对应的校对集是 latin1_swedish_ci
+
+2. 在数据库里创建表格时，也可以指定字符集和校对集。
+    create table demo.t1(id int,name varchar(32)) charset Latin1 collate latin1_swedish_ci;
+    创建了一个表格 t1,它的编码集和校对集 与 数据库里的字符集校对集不同
+3. 字段也有编码方式!!!
+
+
+如果创建数据库时，没有选择正确的编码方式，比如选择了 Latin1编码，会导致无法输入中文
+解决方案:
+    第一步:修改数据库的编码方式
+        alter database demo charset utf8;
+    第二步:修改表的编码方式
+        alter table t1 charset utf8;
+    第三步:修改字段的编码方式
+        alter table t1 modify name varchar(32) charset utf8;
+        latin1 --> utf8 没有问题
+        utf8 --> latin1 修改编码可能会失败
+
+create database demo charset utf8;

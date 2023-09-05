@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.atguigu.maven</groupId>
+    <artifactId>parent</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <!--如果我要进行父模块声明 父模块只做项目管理 不写任何代码-->
+    <!--    得改变打包方式  pom的含义只做项目管理 不写任何代码-->
+    <packaging>pom</packaging>
+
+
+    <!--    直接声明子模块应该用哪些依赖-->
+    <dependencies>
+<!--        <dependency>-->
+<!--            <groupId>org.apache.logging.log4j</groupId>-->
+<!--            <artifactId>log4j-slf4j-impl</artifactId>-->
+<!--            <version>2.12.0</version>-->
+<!--        </dependency>-->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.0</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+    <!-- 使用聚合来完成整个项目统一部署-->
+    <modules>
+
+        <module>../Hello</module>
+        <module>../HelloFriend</module>
+        <module>../milk</module>
+
+    </modules>
+
+
+</project>

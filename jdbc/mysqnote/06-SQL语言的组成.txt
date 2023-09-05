@@ -1,0 +1,21 @@
+SQL语言主要由六个部分组成:
+    1. DDL: Data Definition Language 数据定义语言
+        建库建表，删库删表，改库改表  和数据无关
+        涉及到 create  drop   alter  show... 的使用
+
+    2. DML: Data Manipulation Language 数据操作语言
+        insert   update   delete 用于数据的增删改
+
+    3. DQL: Data Query Language  数据查询语言(重点)
+        SELECT语句，   where / having / group by /order by
+        union / join /  以及函数的使用
+
+    4. TPL: Transaction Processing Language 事务处理语言
+        begin transaction / commit / rollback
+        事务的隔离性
+
+    5. DCL: Data Control Language  数据控制语言
+       管理数据库用户(增加和删除用户，配置用户权限，修改密码等)
+
+    6. CCL: Cursor Control Language 指针控制语言
+        declare cursor, fetch into等语言

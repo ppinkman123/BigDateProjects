@@ -1,0 +1,8 @@
+1. 点击最右侧 Database
+2. 点击 + 选择  Database --> MySQL
+3. 填入MySQL数据库的用户名，默认是 root 以及密码,安装MySQL时的设置的密码
+4. 下载 连接驱动 或者使用提供的 .jar 包
+5. 点击 TestConnection,如果报错，会让设置时区
+6. 设置时区: 点击 advanced --> 选择 ServerTimeZone-->设置值为 GMT+8
+7. 回到 general,点击 TestConnection
+8. 回到 IDEA里发现不显示数据库，点击  ... 在下拉框里选择要查看的数据库
