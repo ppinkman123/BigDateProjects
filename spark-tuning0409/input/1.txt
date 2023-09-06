@@ -1,0 +1,13 @@
+age,name,sex,addr
+18,zhangsan,nan,北京
+18,zhangsan,nan,北京
+18,zhangsan,nan,北京
+18,zhangsan,nan,北京
+18,zhangsan,nan,北京
+
+
+select
+    age,
+    name
+from
+    user
